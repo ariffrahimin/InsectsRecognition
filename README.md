@@ -1,5 +1,5 @@
 <div align="center" id="top"> 
-  <img src="https://github.com/ariffrahimin/insectrecognition/blob/master/images/insects.gif" alt="InsectsRecognition" />
+  <img src="https://github.com/ariffrahimin/insectsrecognition/blob/master/images/insects.gif" alt="InsectsRecognition" />
 
 &#xa0;
 
