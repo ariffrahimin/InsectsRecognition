@@ -33,7 +33,8 @@
 <hr> -->
 
 <p align="center">
-  <a href="#dart-about">About</a> &#xa0; | &#xa0; 
+  <a href="#dart-about">About</a> &#xa0; | &#xa0;
+  <a href="#newspaper-data">Data</a> &#xa0; | &#xa0; 
   <a href="#sparkles-content">Content</a> &#xa0; | &#xa0;
   <a href="#rocket-technologies">Technologies</a> &#xa0; | &#xa0;
   <a href="#white_check_mark-requirements">Requirements</a> &#xa0; | &#xa0;
@@ -48,15 +49,29 @@
 
 There are 5 type of insects in the dataset, that is Butterfly, Dragonfly, Grasshoper, Ladybug, and Mosquito. The goal is to differenciate the images of each insect using machine learning. In this project we use Tensorflow and Keras to make a Sequential Deep Learning. We are using two kind of Deep Learning model, Mark1 and Mark2. Mark 1 is a complex layered model with 6 Million trainable parameters. Mark2 is simple and compact Deep Learning model with 100 000 trainable parameters.
 
+## :newspaper: Data
+
+The original data came from [Kaggle](https://www.kaggle.com/hammaadali/insects-recognition) but I have already clean the data and sort the Training , Val and Testing Data at [GDrive](https://drive.google.com/drive/folders/1jX55sXx5Ewf0YikBk-YFOPTmrXHzSlco?usp=sharing).
+
+The dataset is a group of jpeg files, so its is easier to deal with the datatype as all of the pictures are in one uniform datatype. the size of each picture is 150 x 150.
+
 ## :sparkles: Content
 
-:heavy_check_mark: Mark1 Model;
+:heavy_check_mark: Mark1 Model (code);
 
 <img src="https://github.com/ariffrahimin/insectsrecognition/blob/master/images/mark1.png"/>
+
+:heavy_check_mark: Mark1 Model (visuallize);
+
+<img src="https://github.com/ariffrahimin/insectsrecognition/blob/master/images/mark1_vis.jpg"/>
 
 :heavy_check_mark: Mark2 Model;
 
 <img src="https://github.com/ariffrahimin/insectsrecognition/blob/master/images/mark2.png"/>
+
+:heavy_check_mark: Mark2 Model (visuallize);
+
+<img src="https://github.com/ariffrahimin/insectsrecognition/blob/master/images/mark2_vis.jpg"/>
 
 :heavy_check_mark: Training State;
 
