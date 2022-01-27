@@ -40,7 +40,7 @@ if __name__=="__main__":
 
         log_dir = "logs/fit/" + datetime.datetime.now().strftime("%Y%m%d-%H%M%S")
         tb_call = TensorBoard(log_dir=log_dir, histogram_freq=1)
-        
+
         # choose either model_mark_1 or model_mark_2
         model = model_mark_2(nbr_classes)
 
@@ -64,5 +64,5 @@ if __name__=="__main__":
         model.evaluate(test_generator)
     
     if VISUALIZE:
-        model = model_mark_1(nbr_classes)
+        model = model_mark_2(nbr_classes)
         ann_viz(model)
