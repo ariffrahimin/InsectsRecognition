@@ -13,7 +13,7 @@ def predict_with_model(model, imgpath):
     image = tf.image.convert_image_dtype(image, dtype=tf.float32)
     image = tf.image.resize(image, [150,150]) # (150,150,3) resizing to all images to 150x150 size
     image = tf.expand_dims(image, axis=0) # (1,150,150,3) increasing the dimension to match the predictor matrix
-    prediction_dict = { #cross-reference the pseudo-label with the actual label
+    prediction_dict = { #cross-reference the pseudo-label with the actual label, refer to data_reference.txt
         0:"Butterfly",
         1:"Dragonfly",
         2:"Grasshoper",
@@ -28,8 +28,8 @@ def predict_with_model(model, imgpath):
 
 if __name__=="__main__":
 
-    # load model
-    model = load_model('./Mark1_Model') #load your current modl here
+    # load model folder
+    model = load_model('./Mark1_Model') #load your current model here
     root = Tk()
     #change your initialdir to data folder
     root.filename =  filedialog.askopenfilename(initialdir = "E:\Projects\Python\InsectsRecognition\data\Test",title = "Select file",filetypes = (("jpeg files","*.jpg"),("all files","*.*")))
