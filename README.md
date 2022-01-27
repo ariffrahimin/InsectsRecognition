@@ -34,7 +34,7 @@
 
 <p align="center">
   <a href="#dart-about">About</a> &#xa0; | &#xa0; 
-  <a href="#sparkles-features">Features</a> &#xa0; | &#xa0;
+  <a href="#sparkles-content">Content</a> &#xa0; | &#xa0;
   <a href="#rocket-technologies">Technologies</a> &#xa0; | &#xa0;
   <a href="#white_check_mark-requirements">Requirements</a> &#xa0; | &#xa0;
   <a href="#checkered_flag-starting">Starting</a> &#xa0; | &#xa0;
@@ -46,13 +46,25 @@
 
 ## :dart: About
 
-Describe your project
+There are 5 type of insects in the dataset, that is Butterfly, Dragonfly, Grasshoper, Ladybug, and Mosquito. The goal is to differenciate the images of each insect using machine learning. In this project we use Tensorflow and Keras to make a Sequential Deep Learning. We are using two kind of Deep Learning model, Mark1 and Mark2. Mark 1 is a complex layered model with 6 Million trainable parameters. Mark2 is simple and compact Deep Learning model with 100 000 trainable parameters.
 
-## :sparkles: Features
+## :sparkles: Content
 
-:heavy_check_mark: Feature 1;\
-:heavy_check_mark: Feature 2;\
-:heavy_check_mark: Feature 3;
+:heavy_check_mark: Mark1 Model;\
+
+<img src="https://github.com/ariffrahimin/insectsrecognition/blob/master/images/mark1.png"/>
+
+:heavy_check_mark: Mark2 Model;\
+
+<img src="https://github.com/ariffrahimin/insectsrecognition/blob/master/images/mark2.png"/>
+
+:heavy_check_mark: Training State;\
+
+<img src="https://github.com/ariffrahimin/insectsrecognition/blob/master/images/new_technique.png">
+
+:heavy_check_mark: Predictor Demo;
+
+<img src="https://github.com/ariffrahimin/insectsrecognition/blob/master/images/predictor.gif"/>
 
 ## :rocket: Technologies
 
@@ -67,13 +79,11 @@ Before starting :checkered_flag:, you need to have [Git](https://git-scm.com) an
 
 ## :checkered_flag: Starting
 
-## :checkered_flag: Starting
-
 ```bash
 # Clone this project
 $ git clone https://github.com/ariffrahimin/insectsrecognition
 
-
+$ python predictor.py
 ```
 
 ## :memo: License
