@@ -65,7 +65,7 @@ The dataset is a group of jpeg files, so its is easier to deal with the datatype
 
 <img src="https://github.com/ariffrahimin/insectsrecognition/blob/master/images/mark1_vis.jpg"/>
 
-:heavy_check_mark: Mark2 Model;
+:heavy_check_mark: Mark2 Model (code);
 
 <img src="https://github.com/ariffrahimin/insectsrecognition/blob/master/images/mark2.png"/>
 
