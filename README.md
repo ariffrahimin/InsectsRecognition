@@ -47,7 +47,7 @@
 
 ## :dart: About
 
-There are 5 type of insects in the dataset, that is Butterfly, Dragonfly, Grasshoper, Ladybug, and Mosquito. The goal is to differenciate the images of each insect using machine learning. In this project we use Tensorflow and Keras to make a Sequential Deep Learning. We are using two kind of Deep Learning model, Mark1 and Mark2. Mark 1 is a complex layered model with 6 Million trainable parameters. Mark2 is simple and compact Deep Learning model with 100 000 trainable parameters.
+There are 5 type of insects in the dataset, that is Butterfly, Dragonfly, Grasshoper, Ladybug, and Mosquito. The goal is to differenciate the images of each insect using machine learning. In this project we use Tensorflow and Keras to make a Sequential Deep Learning. We are using two kind of Deep Learning model, Mark1 and Mark2. Mark 1 is a complex layered model with 6 Million trainable parameters. Mark2 is fast Deep Learning model with 4 Million trainable parameters.
 
 ## :newspaper: Data
 
