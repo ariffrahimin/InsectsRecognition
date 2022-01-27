@@ -3,65 +3,81 @@
 # Mark2 is a Fast-Compact Neural Network with 100 000 trainable parameter
 
 
-from tensorflow.keras.layers import Conv2D, Input, Dense, MaxPool2D, BatchNormalization, GlobalAvgPool2D, Flatten, Dropout, MaxPooling2D
-from tensorflow.keras import Model
+from tensorflow.keras.layers import Conv2D, Dense, MaxPool2D, BatchNormalization, GlobalAvgPool2D, Flatten, Dropout, MaxPooling2D
+from keras.models import Sequential
+
 
 def model_mark_1(nbr_classes):
-    my_input = Input(shape=(150, 150, 3))
+    model = Sequential()
+    model.add(Conv2D(32, (3,3), activation='relu',
+                input_shape=(150, 150, 3), padding='same'))
+    model.add(MaxPooling2D(2, 2))
+    model.add(Dropout(0.3))
     
-    x=Conv2D(32, (3,3), activation='relu')(my_input)
-                
-    x=MaxPooling2D(2, 2)(x)
-    x=Dropout(0.3)(x)
-    x=Conv2D(64, (3,3), activation='relu')(x)
-    x=MaxPooling2D(2, 2)(x)
-    x=Dropout(0.3)(x)
     
-    x=Conv2D(128, (3,3), activation='relu', padding='same')(x)
-    x=MaxPooling2D(2, 2)(x)
-    x=Dropout(0.3)(x)
+    model.add(Conv2D(64, (3,3), activation='relu',
+                input_shape=(150, 150, 3), padding='same'))
+    model.add(MaxPooling2D(2, 2))
+    model.add(Dropout(0.3))
     
-    x=Conv2D(256, (3,3), activation='relu', padding='same')(x)
-    x=MaxPooling2D(2, 2)(x)
-    x=Dropout(0.3)(x)
+    model.add(Conv2D(128, (3,3), activation='relu', padding='same'))
+    model.add(MaxPooling2D(2, 2))
+    model.add(Dropout(0.3))
     
-    x=Conv2D(512, (3,3), activation='relu', padding='same')(x)
-    x=MaxPooling2D(2, 2)(x)
-    x=Dropout(0.3)(x)
+    model.add(Conv2D(256, (3,3), activation='relu', padding='same'))
+    model.add(MaxPooling2D(2, 2))
+    model.add(Dropout(0.3))
+    
+    model.add(Conv2D(512, (3,3), activation='relu', padding='same'))
+    model.add(MaxPooling2D(2, 2))
+    model.add(Dropout(0.3))
         
-    x=Conv2D(512, (3,3), activation='relu', padding='same')(x)
-    x=MaxPooling2D(2, 2)(x)
-    x=Dropout(0.3)(x)
+    model.add(Conv2D(512, (3,3), activation='relu', padding='same'))
+    model.add(MaxPooling2D(2, 2))
+    model.add(Dropout(0.3))
     
-    x=Flatten()(x)
-    x=Dense(1024, activation='relu')(x)
-    x=Dropout(0.5)(x)
+    model.add(Flatten())
+    model.add(Dense(1024, activation='relu'))
+    model.add(Dropout(0.5))
 
-    x=Dense(512, activation='relu')(x)
-    x=Dropout(0.5)(x)
+    model.add(Dense(512, activation='relu'))
+    model.add(Dropout(0.5))
     
-    x=Dense(nbr_classes, activation='softmax')(x)
-    
+    model.add(Dense(nbr_classes, activation='softmax'))
 
-    return Model(inputs=my_input, outputs=x)
+    return model  
+
 
 def model_mark_2(nbr_classes):
-    my_input = Input(shape=(150,150, 3))
 
-    x=Conv2D(32, (3, 3), activation='relu')(my_input)
-    x=MaxPool2D()(x)
-    x=BatchNormalization()(x)
+    model = Sequential()
+
+    model.add(Conv2D(
+            32,(3, 3),
+            input_shape=(150,150,3),
+            activation='relu',
+        ))
+    model.add(MaxPool2D(2, 2))
+    model.add(BatchNormalization())
+
+    model.add(Conv2D(
+            64,(3, 3),
+            input_shape=(150,150,3),
+            activation='relu',
+        ))
+    model.add(MaxPool2D(2, 2))
+    model.add(BatchNormalization())
     
-    x=Conv2D(64, (3, 3), activation='relu')(x)
-    x=MaxPool2D()(x)
-    x=BatchNormalization()(x)
+    model.add(Conv2D(
+        128,(3, 3),
+        activation='relu',
+        input_shape=(150,150,3)
+    ))
+    model.add(MaxPool2D(2, 2))
+    model.add(BatchNormalization())
+    model.add(GlobalAvgPool2D())
+    model.add(Dense(128, activation='relu'))
+    model.add(Dense(nbr_classes, activation='softmax'))
 
-    x=Conv2D(128, (3, 3), activation='relu')(x)
-    x=MaxPool2D()(x)
-    x=BatchNormalization()(x)
+    return model
 
-    x=GlobalAvgPool2D()(x)
-    x=Dense(128, activation='relu')(x)
-    x=Dense(nbr_classes, activation='softmax')(x)
-
-    return Model(inputs=my_input, outputs=x)

@@ -17,7 +17,7 @@ def predict_with_model(model, imgpath):
         0:"Butterfly",
         1:"Dragonfly",
         2:"Grasshoper",
-        3:"Ladybird",
+        3:"Ladybug",
         4:"Mosquito"
     }
     predictions = model.predict(image)
@@ -29,7 +29,7 @@ def predict_with_model(model, imgpath):
 if __name__=="__main__":
 
     # load model
-    model = load_model('./Mark1_Model') #load your current modl here
+    model = load_model('./Mark2_Model') #load your current modl here
     root = Tk()
     root.filename =  filedialog.askopenfilename(initialdir = "/",title = "Select file",filetypes = (("jpeg files","*.jpg"),("all files","*.*")))
     print (f"opening {root.filename} file") 

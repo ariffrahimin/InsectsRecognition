@@ -50,15 +50,15 @@ There are 5 type of insects in the dataset, that is Butterfly, Dragonfly, Grassh
 
 ## :sparkles: Content
 
-:heavy_check_mark: Mark1 Model;\
+:heavy_check_mark: Mark1 Model;
 
 <img src="https://github.com/ariffrahimin/insectsrecognition/blob/master/images/mark1.png"/>
 
-:heavy_check_mark: Mark2 Model;\
+:heavy_check_mark: Mark2 Model;
 
 <img src="https://github.com/ariffrahimin/insectsrecognition/blob/master/images/mark2.png"/>
 
-:heavy_check_mark: Training State;\
+:heavy_check_mark: Training State;
 
 <img src="https://github.com/ariffrahimin/insectsrecognition/blob/master/images/new_technique.png">
 
@@ -82,6 +82,8 @@ Before starting :checkered_flag:, you need to have [Git](https://git-scm.com) an
 ```bash
 # Clone this project
 $ git clone https://github.com/ariffrahimin/insectsrecognition
+
+$ cd insectsrecognition
 
 $ python predictor.py
 ```

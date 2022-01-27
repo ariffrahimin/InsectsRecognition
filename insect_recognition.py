@@ -4,6 +4,7 @@ from deep_learning_model import model_mark_2, model_mark_1
 import datetime
 from tensorflow.keras.callbacks import ModelCheckpoint, EarlyStopping, TensorBoard
 import tensorflow as tf
+from ann_visualizer.visualize import ann_viz
 
 if __name__=="__main__":
 
@@ -16,9 +17,10 @@ if __name__=="__main__":
     train_generator, val_generator, test_generator = create_generators(batch_size, path_to_train, path_to_val, path_to_test)
     nbr_classes = train_generator.num_classes
 
+    # Change these values to choose the action
     TRAIN=True
     TEST=False
-    
+    VISUALIZE=False
 
     if TRAIN:
         # Choose which Deeplearning model you want to use and select the apropriate folder
@@ -38,7 +40,8 @@ if __name__=="__main__":
 
         log_dir = "logs/fit/" + datetime.datetime.now().strftime("%Y%m%d-%H%M%S")
         tb_call = TensorBoard(log_dir=log_dir, histogram_freq=1)
-
+        
+        # choose either model_mark_1 or model_mark_2
         model = model_mark_2(nbr_classes)
 
         model.summary()
@@ -59,3 +62,7 @@ if __name__=="__main__":
         model.evaluate(val_generator)
         print("Evaluating test set : ")
         model.evaluate(test_generator)
+    
+    if VISUALIZE:
+        model = model_mark_1(nbr_classes)
+        ann_viz(model)
