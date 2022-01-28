@@ -18,9 +18,9 @@ if __name__=="__main__":
     nbr_classes = train_generator.num_classes
 
     # Change these values to choose the action
-    TRAIN=True
+    TRAIN=False
     TEST=False
-    VISUALIZE=False
+    VISUALIZE=True
 
     if TRAIN:
         # Choose which Deeplearning model you want to use and select the apropriate folder

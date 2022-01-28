@@ -29,7 +29,7 @@ def predict_with_model(model, imgpath):
 if __name__=="__main__":
 
     # load model folder
-    model = load_model('./Mark1_Model') #load your current model here
+    model = load_model('./Mark2_Model') #load your current model here
     root = Tk()
     #change your initialdir to data folder
     root.filename =  filedialog.askopenfilename(initialdir = "E:\Projects\Python\InsectsRecognition\data\Test",title = "Select file",filetypes = (("jpeg files","*.jpg"),("all files","*.*")))
