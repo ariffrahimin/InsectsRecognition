@@ -100,6 +100,9 @@ $ git clone https://github.com/ariffrahimin/insectsrecognition
 
 $ cd insectsrecognition
 
+$ pip install -r requirements.txt
+# if not working try run "pip3 install -r requirements.txt"
+
 $ python predictor.py
 ```
 
